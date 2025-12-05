@@ -74,15 +74,24 @@
     
     /* Header styling */
     header {
-      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-      /* Purple gradient - you can change colors */
-      color: white;
-      padding: 60px 20px;
-      text-align: center;
-      margin-bottom: 40px;
-      border-radius: 0 0 20px 20px;
-      /* Rounded bottom corners */
-    }
+  /* Background image with gradient overlay for text readability */
+  background: 
+    linear-gradient(135deg, rgba(93, 159, 98, 0.228) 0%, rgba(68, 68, 68, 0.85) 100%),
+    url('images/waxeye_for_header.jpg') center center / cover no-repeat;
+  /* 
+    Breaking this down:
+    - linear-gradient with rgba (includes transparency/opacity)
+    - url('images/header-bg.jpg') - path to your image
+    - center center - positions image in center
+    - / cover - scales image to cover entire header
+    - no-repeat - doesn't tile the image
+  */
+  color: white;
+  padding: 60px 20px;
+  text-align: center;
+  margin-bottom: 40px;
+  border-radius: 0 0 20px 20px;
+}
     
     header h1 {
       font-size: 2.5rem;
@@ -119,7 +128,7 @@
     
     /* Headings */
     h2 {
-      color: #667eea;
+      color: #276f39;
       /* Matches header gradient */
       font-size: 1.8rem;
       margin-bottom: 15px;
@@ -220,7 +229,7 @@
     <div class="container">
       <h1>Oliver Thompson</h1>
       <!-- h1 = Heading 1, the main page title. Only one per page for SEO -->
-      <p>Senior Data Leader | AI Governance | Building Cloud & Technical Skills</p>
+      <p>Data Lead | Digital Government | Building Cloud Skills</p>
     </div>
   </header>
 
