@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<!-- 
+  DOCTYPE tells the browser this is HTML5 
+  Always include this as the very first line
+-->
+<html lang="en">
+<!-- 
+  The <html> element is the root of your document
+  lang="en" helps screen readers and search engines
+-->
+
+<head>
+  <!-- 
+    The <head> contains metadata about your page
+    Nothing in here is visible on the page itself
+  -->
+  
+  <meta charset="UTF-8">
+  <!-- Character encoding - ensures text displays correctly -->
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Makes your site responsive on mobile devices - CRITICAL -->
+  
+  <meta name="description" content="Oliver Thompson - Senior Data Leader building cloud and technical skills">
+  <!-- This appears in search results - important for SEO -->
+  
+  <title>Oliver Thompson | Cloud & Data Portfolio</title>
+  <!-- Shows in browser tab and bookmarks -->
+  
+  <style>
+    /* 
+      CSS (Cascading Style Sheets) controls how things LOOK
+      HTML controls STRUCTURE, CSS controls APPEARANCE
+      
+      This is "inline CSS" - all in the same file
+      Later you'd move this to a separate style.css file
+    */
+    
+    /* Reset default browser styles for consistency */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      /* box-sizing makes width calculations easier */
+    }
+    
+    /* 
+      CSS works with "selectors"
+      body { } means "apply these styles to the <body> element"
+    */
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
+      /* System fonts - fast loading, looks native on each OS */
+      line-height: 1.6;
+      /* Space between lines - improves readability */
+      color: #333;
+      /* Dark grey text - easier on eyes than pure black */
+      background-color: #f5f5f5;
+      /* Light grey background */
+    }
+    
+    /* 
+      Container pattern - centers content and limits width
+      Common in modern web design
+    */
+    .container {
+      max-width: 900px;
+      /* Doesn't get wider than 900px even on huge screens */
+      margin: 0 auto;
+      /* Centers the container horizontally */
+      padding: 20px;
+      /* Space around content on small screens */
+    }
+    
+    /* Header styling */
+    header {
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      /* Purple gradient - you can change colors */
+      color: white;
+      padding: 60px 20px;
+      text-align: center;
+      margin-bottom: 40px;
+      border-radius: 0 0 20px 20px;
+      /* Rounded bottom corners */
+    }
+    
+    header h1 {
+      font-size: 2.5rem;
+      /* rem units scale with user preferences */
+      margin-bottom: 10px;
+      font-weight: 700;
+    }
+    
+    header p {
+      font-size: 1.2rem;
+      opacity: 0.95;
+      /* Slightly transparent for subtle effect */
+    }
+    
+    /* Main content area */
+    main {
+      background: white;
+      padding: 40px;
+      border-radius: 10px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      /* Subtle shadow creates depth */
+      margin-bottom: 40px;
+    }
+    
+    /* Section spacing */
+    section {
+      margin-bottom: 40px;
+    }
+    
+    section:last-child {
+      margin-bottom: 0;
+      /* No margin on the last section */
+    }
+    
+    /* Headings */
+    h2 {
+      color: #667eea;
+      /* Matches header gradient */
+      font-size: 1.8rem;
+      margin-bottom: 15px;
+      padding-bottom: 10px;
+      border-bottom: 2px solid #f0f0f0;
+      /* Subtle underline separator */
+    }
+    
+    h3 {
+      color: #555;
+      font-size: 1.3rem;
+      margin-top: 20px;
+      margin-bottom: 10px;
+    }
+    
+    /* Paragraph styling */
+    p {
+      margin-bottom: 15px;
+      line-height: 1.7;
+    }
+    
+    /* List styling */
+    ul {
+      margin-left: 20px;
+      margin-bottom: 15px;
+    }
+    
+    li {
+      margin-bottom: 8px;
+    }
+    
+    /* Placeholder styling - makes it clear what needs updating */
+    .placeholder {
+      background-color: #fffbea;
+      /* Light yellow */
+      border-left: 4px solid #f59e0b;
+      /* Orange accent */
+      padding: 15px;
+      margin: 20px 0;
+      border-radius: 5px;
+    }
+    
+    .placeholder strong {
+      color: #d97706;
+    }
+    
+    /* Link styling */
+    a {
+      color: #667eea;
+      text-decoration: none;
+      /* No underline by default */
+      border-bottom: 1px solid transparent;
+      transition: border-color 0.3s ease;
+      /* Smooth animation on hover */
+    }
+    
+    a:hover {
+      border-bottom: 1px solid #667eea;
+      /* Underline appears on hover */
+    }
+    
+    /* Footer styling */
+    footer {
+      text-align: center;
+      padding: 30px 20px;
+      color: #666;
+      font-size: 0.9rem;
+    }
+    
+    /* 
+      Media query - responsive design for mobile
+      This activates when screen is 600px or less
+    */
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 2rem;
+      }
+      
+      main {
+        padding: 20px;
+      }
+      
+      h2 {
+        font-size: 1.5rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <!-- 
+    The <body> contains everything visible on your page
+    Think of it as the canvas where you paint your content
+  -->
+  
+  <header>
+    <!-- Semantic HTML - <header> clearly indicates this is the page header -->
+    <div class="container">
+      <h1>Oliver Thompson</h1>
+      <!-- h1 = Heading 1, the main page title. Only one per page for SEO -->
+      <p>Senior Data Leader | AI Governance | Building Cloud & Technical Skills</p>
+    </div>
+  </header>
+
+  <div class="container">
+    <main>
+      <!-- <main> indicates the primary content of the page -->
+      
+      <section id="about">
+        <!-- 
+          <section> groups related content together
+          id="about" lets you link directly to this section: yoursite.com/#about
+        -->
+        <h2>About Me</h2>
+        <p>
+          I'm an experienced leader in data, evidence and insights, with a proven record of shaping
+          strategy, leading enterprise transformation and enabling AI adoption through strong
+          governance and capability uplift.
+        </p>
+        <p>
+          Currently building hands-on technical cloud skills to complement my strategic leadership
+          and governance expertise. This portfolio documents my learning journey and cloud projects.
+        </p>
+        
+        <h3>Background</h3>
+        <ul>
+          <li><strong>Current:</strong> Data Strategy & Capability Lead at Callaghan Innovation</li>
+          <li><strong>Expertise:</strong> AI Governance, Data Strategy, Enterprise Transformation</li>
+          <li><strong>Education:</strong> PhD in Bioengineering, MSc in Electronics, BSc in Physics</li>
+          <li><strong>Certifications:</strong> Certified AI Governance Professional (IAPP), IC Agile</li>
+        </ul>
+      </section>
+
+      <section id="projects">
+        <h2>Cloud Projects</h2>
+        <div class="placeholder">
+          <p><strong>This section will showcase my AWS projects as I build them:</strong></p>
+          <ul>
+            <li>Static website hosting (this site!) - S3 + CloudFront architecture</li>
+            <li>Serverless data pipeline - Lambda, S3, Athena</li>
+            <li>Secure multi-tier application - VPC, EC2, RDS</li>
+            <li>Data governance dashboard</li>
+            <li>AI/ML model deployment with governance controls</li>
+          </ul>
+        </div>
+        
+        <h3>Project 1: Static Portfolio Website</h3>
+        <p><strong>Status:</strong> In Progress</p>
+        <p><strong>Technologies:</strong> AWS S3, CloudFront, Route 53, HTML/CSS</p>
+        <p><strong>Architecture:</strong> Simple static website served from S3 with CloudFront CDN for global delivery and HTTPS.</p>
+        <p><strong>Learning Goals:</strong></p>
+        <ul>
+          <li>S3 bucket configuration and static website hosting</li>
+          <li>CloudFront distribution setup and caching</li>
+          <li>IAM policies and security best practices</li>
+          <li>Cost optimization strategies</li>
+          <li>Architecture documentation and diagramming</li>
+        </ul>
+      </section>
+
+      <section id="learning">
+        <h2>Learning Journey</h2>
+        <p>
+          Documenting my path to AWS certification and hands-on cloud expertise:
+        </p>
+        
+        <h3>Current Focus</h3>
+        <ul>
+          <li>AWS Certified Cloud Practitioner preparation</li>
+          <li>Building practical cloud projects</li>
+          <li>Understanding AWS Well-Architected Framework</li>
+          <li>Learning infrastructure as code and CI/CD practices</li>
+        </ul>
+        
+        <h3>Target Certifications</h3>
+        <ul>
+          <li>AWS Certified Cloud Practitioner (Q1 2025)</li>
+          <li>AWS Certified Solutions Architect - Associate (Q2 2025)</li>
+          <li>AWS Certified Data Analytics - Specialty (Q3 2025)</li>
+        </ul>
+        
+        <div class="placeholder">
+          <p><strong>Blog coming soon:</strong> I'll document key learnings, challenges overcome, and insights gained through hands-on cloud projects.</p>
+        </div>
+      </section>
+
+      <section id="contact">
+        <h2>Connect</h2>
+        <p>
+          I'm actively building my cloud skills and would love to connect with others on similar journeys.
+        </p>
+        <p>
+          <strong>Email:</strong> <a href="mailto:oliverthompsoncv@gmail.com">oliverthompsoncv@gmail.com</a><br>
+          <strong>CV Chatbot:</strong> <a href="https://cv-chatbot-oliverbendixthompson.streamlit.app" target="_blank">Interactive CV</a>
+        </p>
+      </section>
+
+    </main>
+  </div>
+
+  <footer>
+    <!-- <footer> for page footer content -->
+    <div class="container">
+      <p>&copy; 2025 Oliver Thompson | Built on AWS | Last updated: December 2024</p>
+      <!-- &copy; is an HTML entity for the © symbol -->
+    </div>
+  </footer>
+
+</body>
+</html>
